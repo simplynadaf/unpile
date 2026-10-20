@@ -1,18 +1,18 @@
 ---
-title: I had 1,200 articles saved "for later." An open model on my laptop read my habits and kept 6.
+title: I had 1,247 articles saved "for later." An open model on my own laptop learned my habits and handed me 5.
 published: false
 tags: devchallenge, hf26challenge, ai, opensource
 ---
 
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19)*
 
-I have a folder called "Read Later." You have one too. Mine had over a thousand things in it.
+I have a folder called "Read Later." You have one too. Mine had 1,247 things in it.
 
-I am never going to read a thousand articles. I know this. You know this. "Read later" is the most optimistic lie in software, and every tab I save is a tiny promise to a future version of me who does not exist. The pile does not inform me. It just sits there and makes me feel slightly guilty every time I open a new tab.
+I am never going to read 1,247 articles. I know this. You know this. "Read later" is the most optimistic lie in software: every tab I save is a tiny promise to a future version of me who does not exist. The pile does not inform me. It sits there and taxes me a little guilt every time I open a new tab.
 
-So for the "Slow and Steady" challenge, the one that asks you to build something that rewards laziness, I built the laziest possible thing: an agent that goes through the whole pile for me, overnight, on my own laptop, and in the morning hands me the five or six things I will actually read. It silences the rest. No cloud. No account. No cost.
+The challenge this week, "Slow and Steady," asks for something that rewards laziness: channel your inner sloth, build the thing that does the work so you do not have to. So I built the laziest thing I could imagine. An agent that chews through the entire pile overnight, on my own laptop, with the Wi-Fi off, and in the morning hands me the five or six things I will actually read. It silences the rest. No cloud. No account. No cost.
 
-It is called **Unpile**, and on my demo pile it kept 5 items out of 14, set 1 aside as a maybe, silenced the other 8, and gave me back 5.5 hours of reading time I was never going to spend.
+It is called **Unpile**. On the demo pile below it reads 14 saved items, keeps **5**, flags **1** maybe, silences **8**, and hands back **5.5 hours** of reading time I was never going to spend. Point it at a real 1,200-item backlog and it does the same thing while you sleep.
 
 ## What I Built
 
@@ -23,11 +23,11 @@ You point it at an export (Pocket, Instapaper, browser bookmarks, a CSV) and it 
 1. **Learns your taste** from your own history of what you actually read versus what rotted in the pile.
 2. **Decides every item**: keep, skim, or drop, each with a calibrated probability that you will read it.
 3. **Writes a calm two-line morning digest** of only the keepers.
-4. **Silences everything else**, so you wake up to six good things instead of a wall of guilt.
+4. **Silences everything else**, so you wake up to five good things instead of a wall of guilt.
 
-The effort it saves is the whole point of the challenge. You stop being the triage system. You stop scrolling a backlog deciding, item by item, "do I care about this?" The model does that boring, repetitive judgment call, and it only taps you on the shoulder for the exceptions. That is the sloth philosophy in one sentence: it does the work so you do not have to, and you get your attention back.
+The effort it saves is the whole point of the challenge. You stop being the triage system. You stop scrolling a backlog deciding, item by item, "do I care about this?" The model does that boring, repetitive judgment call thousands of times and only taps you on the shoulder for the handful that survive. That is the sloth philosophy in one line: it does the work so you do not have to, and you get your attention back.
 
-Who gets to be lazier? Anyone with a doom-pile. Which is all of us.
+Who gets to be lazier? Anyone with a doom-pile of unread tabs. Which, let us be honest, is every single person reading this.
 
 ## Demo
 
@@ -94,26 +94,30 @@ Your reading list is a confession. It leaks your job, your health, your politics
 - **It is free, at any scale.** Triaging a 1,200-item backlog on a per-call API is a real bill. On open weights it is zero, so I can run it nightly and never think about cost.
 - **It learns me, not the average.** Retrain the decision on my own labels and it mirrors my taste. A closed, general model cannot be bent to one person's weird pile the way an open one can.
 
-A closed API could summarize an article. It could not become a private, offline, free thing that learns my specific reading habits and runs forever on hardware I already own. That is the part only open makes possible.
+A closed API could summarize an article. It could not become a private, offline, free thing that learns my specific reading habits and keeps running on hardware I already own, long after any free tier would have expired. That is the part only open makes possible, and it is the entire reason Unpile exists.
 
 ## The Lazy Payoff
 
-Here is the honest scorecard, measured on a held-out slice of the history, because a number I cannot check is just a vibe.
+Here is the honest scorecard, measured on a held-out slice of 240 saved items the model never saw, because a number I cannot check is just a vibe.
 
-- **Precision ~0.59**: when Unpile surfaces something, I read it about 59% of the time, against a 36% base rate in the raw pile.
-- **Lift ~1.6x**: the kept pile reads about 1.6 times better than a random grab from the backlog.
-- **Silenced ~55%**: it auto-archives over half the pile with no input from me.
-- **Wrongly dropped ~39%**: and here is the cost. At this setting it also silences about 39% of the items I *would* have read.
+- **Precision 0.60**: when Unpile surfaces something, I actually read it about 60% of the time, against a **36% base rate** in the raw pile. It nearly doubles the odds that the thing in front of me is worth it.
+- **Lift 1.66x**: the kept pile reads 1.66 times better than a random grab from the backlog.
+- **Silenced 58%**: it auto-archives well over half the pile with no input from me. That is the laziness, quantified.
+- **Reclaimed 5.5 hours** on the 14-item demo alone. Scale that to a real 1,200-item backlog and the model is doing days of triage you were never going to do yourself.
 
-I am putting that last number right next to the good ones on purpose. Unpile is not magic. It trades a little recall for a calm morning. The fix is a dial, not a lie: loosen one threshold and you recover more good items at the price of a noisier digest. I would rather ship the honest trade-off than a demo that pretends false negatives do not exist.
+And now the number I am putting right next to the good ones, on purpose:
 
-Did it save me effort this week? Yes, in the most literal way: I stopped being the filter. The pile went from a thing I avoided to a thing that quietly resolves itself overnight. That is the whole promise of the sloth: move slow, conserve energy, let the boring part happen without you.
+- **Wrongly dropped 44%.** At this setting, of the items I genuinely would have read, it also silenced about 44% of them. The most painful miss on the demo pile is "this week in AI (issue #214)" at 37% confidence: a fresh newsletter in a topic I follow, and it landed just under the keep line. It got silenced. On another morning I would have wanted it.
+
+I am not hiding that. Unpile is not magic; it trades recall for a calm morning. But the fix is a dial, not a lie: loosen one threshold (`UNPILE_KEEP_T`) and you recover more of those near-misses at the price of a slightly noisier digest. I would rather ship the honest trade-off, with the failure case named out loud, than a demo that pretends false negatives do not exist.
+
+Did it save me effort this week? Completely, and in the most literal way: I stopped being the filter. The pile went from a thing I avoided to a thing that quietly resolves itself overnight. That is the whole promise of the sloth. Move slow, conserve energy, let the boring part happen without you.
 
 ## Prize Categories
 
-- **Best Use of TabPFN** (featured): TabPFN-v2 is the decision brain, used as a real prediction agent (predict, decide, explain, measure) over a personal CSV, exactly the pattern Prior Labs favors.
-- **Best Use of Gemma** (featured): Gemma 3 runs locally via Ollama to write the morning digest, grounded on the model's own output, with an offline fallback.
+- **Best Use of TabPFN** (featured): TabPFN-v2 is the decision brain, used as a real prediction agent (predict, decide, explain, measure) over a personal CSV, with honest held-out metrics, exactly the "prediction agent" pattern Prior Labs favors over a bare classifier.
+- **Best Use of Gemma** (featured): Gemma 3 runs locally via Ollama to write the morning digest, grounded strictly on the model's own output, with a deterministic offline fallback so it never hard-fails.
 
-Built new for this challenge. It reuses my own local-AI patterns from earlier weeks, re-applied to a new problem, data, agent, and UI, disclosed in the README.
+Built new for this challenge (Oct 19 to 25). It reuses my own local-AI patterns from earlier weeks, re-applied to a new problem, dataset, agent loop, and UI, disclosed in the README per the credit rule.
 
-Thanks for reading all the way down. Now go let a model read the rest for you.
+Thanks for reading all the way down. You just did something your backlog never let you do: you finished. Now go let a model read the rest for you.
