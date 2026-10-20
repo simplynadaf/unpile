@@ -39,10 +39,9 @@ function setBadge(browser) {
 }
 
 function renderHeroFromBaked(d) {
-  const kept = d.triage.kept.length;
-  const total = d.triage.total;
-  $('#hero-total').textContent = total.toLocaleString();
-  $('#hero-kept').textContent = kept;
+  // The hero headline tells the personal-backlog story (1,247 saved, kept a handful).
+  // It is intentionally NOT the demo pile size, so we leave #hero-total / #hero-kept
+  // as authored and only sync the one real metric we quote in the subhead.
   $('#hero-silenced').textContent = Math.round(d.metrics.silenced_pct * 100) + '%';
 }
 

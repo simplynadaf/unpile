@@ -31,7 +31,13 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--fg);font-family:var(--font);font-weight:300;line-height:1.6;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden}
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  /* premium depth: ambient radial glows + top vignette behind everything */
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(900px 520px at 50% -8%, #16a34a24, transparent 60%),
+      radial-gradient(700px 480px at 88% 8%, #0ea5e918, transparent 55%),
+      radial-gradient(640px 420px at 8% 22%, #16a34a12, transparent 55%);}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space-3)}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
@@ -58,19 +64,23 @@
   @media(max-width:720px){.nav-links{display:none}}
 
   /* ---- hero ---- */
-  header{padding:var(--space-5) 0 var(--space-4);text-align:center;position:relative}
+  header{padding:calc(var(--space-5) + 20px) 0 var(--space-4);text-align:center;position:relative}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;
-    color:var(--accent);border:1px solid var(--border2);padding:6px 14px;border-radius:999px;
-    background:var(--accent-soft);margin-bottom:var(--space-3)}
-  header h1{font-size:clamp(34px,6vw,62px);max-width:900px;margin:0 auto var(--space-2)}
-  header h1 .num{color:var(--accent)}
-  header .sub{font-size:clamp(16px,2.4vw,21px);color:var(--muted);max-width:640px;margin:0 auto var(--space-3)}
+    color:var(--accent);border:1px solid #16a34a3d;padding:7px 16px;border-radius:999px;
+    background:linear-gradient(180deg,#16a34a1f,#16a34a0d);margin-bottom:var(--space-3);
+    box-shadow:0 0 0 1px #0b1020 inset,0 6px 22px #16a34a1f}
+  header h1{font-size:clamp(34px,6vw,64px);max-width:920px;margin:0 auto var(--space-2);font-weight:700}
+  header h1 .num{background:linear-gradient(135deg,#22C55E,#0ea5e9);-webkit-background-clip:text;
+    background-clip:text;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 22px #16a34a66)}
+  header .sub{font-size:clamp(16px,2.4vw,21px);color:#aeb9cc;max-width:660px;margin:0 auto var(--space-3)}
   .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .btn{padding:13px 24px;border-radius:12px;font-weight:600;font-size:15px;cursor:pointer;
     transition:transform .15s,box-shadow .15s,background .15s;border:1px solid transparent;display:inline-flex;align-items:center;gap:9px}
-  .btn-primary{background:var(--accent);color:var(--on-accent)}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 26px #16a34a55;text-decoration:none}
-  .btn-ghost{background:transparent;color:var(--fg);border-color:var(--border2)}
+  .btn-primary{background:linear-gradient(135deg,#16A34A,#15b45a);color:var(--on-accent);
+    box-shadow:0 8px 24px #16a34a3d,0 0 0 1px #22c55e55 inset}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px #16a34a66;text-decoration:none}
+  .btn-ghost{background:#0e122399;color:var(--fg);border-color:var(--border2);backdrop-filter:blur(6px)}
   .btn-ghost:hover{background:var(--secondary);text-decoration:none}
   .trust{margin-top:var(--space-3);display:flex;gap:18px;justify-content:center;flex-wrap:wrap;
     font-size:13px;color:var(--muted)}
@@ -82,8 +92,8 @@
   .section-head h2{font-size:clamp(26px,4vw,40px);margin-bottom:12px}
   .section-head p{color:var(--muted);font-size:17px}
 
-  .app{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
-    box-shadow:0 24px 60px #00000066}
+  .app{background:linear-gradient(180deg,#0E1223,#0b1020);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+    box-shadow:0 30px 80px #00000080,0 0 0 1px #16a34a1f,0 -1px 40px #16a34a14}
   .app-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
     padding:16px 20px;border-bottom:1px solid var(--border);background:var(--card2)}
   .app-bar .title{display:flex;align-items:center;gap:10px;font-weight:600}
@@ -201,8 +211,8 @@
         <svg class="ic" viewBox="0 0 24 24" style="width:14px;height:14px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
         Hacktoberfest · Slow and Steady · runs on your laptop
       </span>
-    <h1>I had <span class="num" id="hero-total">1,247</span> articles saved “for later.”<br/>An open model learned my habits and kept <span class="num" id="hero-kept">6</span>.</h1>
-    <p class="sub">Unpile is a 100% local agent that reads your “save it, never open it” habits, silences the <span id="hero-silenced">55%</span> of your backlog that will only ever rot, and hands you a calm two-line morning digest of the few things actually worth your coffee. No cloud. No account. $0.</p>
+    <h1>I had <span class="num" id="hero-total">1,247</span> articles saved “for later.”<br/>An open model learned my habits and kept <span class="num" id="hero-kept">5</span>.</h1>
+    <p class="sub">Unpile is a 100% local agent that reads your “save it, never open it” habits, silences the <span id="hero-silenced">58%</span> of your backlog that will only ever rot, and hands you a calm two-line morning digest of the few things actually worth your coffee. No cloud. No account. $0.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="#demo">
         <svg class="ic" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
