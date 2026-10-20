@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Unpile - your read-later pile, triaged by an open model on your own machine</title>
 <meta name="description" content="A 100% local agent that reads your 'save for later' habits with TabPFN-v2 and hands you only the few articles worth your morning. Open-weight, offline, $0." />
+<!-- Open Graph / Twitter: rich link previews when shared on DEV, X, LinkedIn. -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Unpile - your read-later pile, triaged by an open model on your own machine" />
+<meta property="og:description" content="You save hundreds of articles for later. You read about six. Unpile is a 100% local agent (TabPFN-v2 + Gemma 3) that learns which is which and clears the pile for you. Offline, $0, private." />
+<meta property="og:image" content="https://simplynadaf.github.io/unpile/banner.png" />
+<meta property="og:url" content="https://simplynadaf.github.io/unpile/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Unpile - your read-later pile, triaged by an open model on your own machine" />
+<meta name="twitter:description" content="A 100% local agent (TabPFN-v2 + Gemma 3) that learns which saved articles you'll actually read and silences the rest. Offline, $0, private." />
+<meta name="twitter:image" content="https://simplynadaf.github.io/unpile/banner.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -96,8 +106,8 @@
   .digest .greeting{font-size:19px;font-weight:500;color:var(--fg)}
   .digest .d-src{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:8px}
 
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0}
-  @media(max-width:760px){.cols{grid-template-columns:1fr}}
+  .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+  @media(max-width:900px){.cols{grid-template-columns:1fr}}
   .col{padding:20px}
   .col + .col{border-left:1px solid var(--border)}
   @media(max-width:760px){.col + .col{border-left:0;border-top:1px solid var(--border)}}
@@ -105,6 +115,7 @@
   .col-head h3{font-size:15px;display:flex;align-items:center;gap:9px}
   .pill{font-family:var(--mono);font-size:11px;padding:3px 9px;border-radius:999px}
   .pill.keep{background:#16a34a1f;color:var(--keep)}
+  .pill.skim{background:#d4a01722;color:var(--skim)}
   .pill.drop{background:#64748b22;color:var(--drop)}
 
   .item{border:1px solid var(--border);border-radius:12px;padding:13px 14px;margin-bottom:10px;
@@ -245,6 +256,13 @@
             <span class="pill keep" id="keep-count">0 kept</span>
           </div>
           <div id="keep-list"></div>
+        </div>
+        <div class="col">
+          <div class="col-head">
+            <h3><svg class="ic" style="color:var(--skim)" viewBox="0 0 24 24"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg> Maybe (a quick skim)</h3>
+            <span class="pill skim" id="skim-count">0 skim</span>
+          </div>
+          <div id="skim-list"></div>
         </div>
         <div class="col">
           <div class="col-head">

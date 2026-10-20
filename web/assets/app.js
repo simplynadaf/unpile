@@ -21,7 +21,7 @@ async function boot() {
     setBadge(false);
   } else {
     // fallback: synthesize from model.js alone (should rarely happen)
-    renderHonest({ lift: 1.6, silenced_pct: 0.55, missed_pct: 0.39, precision: 0.59, recall: 0.38 });
+    renderHonest({ lift: 1.6, silenced_pct: 0.583, missed_pct: 0.437, precision: 0.603, recall: 0.402 });
   }
   $('#btn-run').addEventListener('click', runBrowserTriage);
   $('#btn-reset').addEventListener('click', () => {
@@ -73,18 +73,23 @@ function itemCard(d, blurb) {
 
 function renderColumns(tri, digest, animate) {
   const keepers = tri.kept;
+  const skimmers = tri.skim || [];
   const blurbs = (digest && digest.blurbs) || [];
   $('#keep-list').innerHTML = keepers.length
     ? keepers.map((d, i) => itemCard(d, blurbs[i])).join('')
     : `<div class="empty">Nothing cleared the bar - a quiet morning.</div>`;
+  $('#skim-list').innerHTML = skimmers.length
+    ? skimmers.map((d) => itemCard(d, null)).join('')
+    : `<div class="empty">No borderline calls this time.</div>`;
   $('#drop-list').innerHTML = tri.dropped.length
     ? tri.dropped.map((d) => itemCard(d, null)).join('')
     : `<div class="empty">Nothing dropped this time.</div>`;
   $('#keep-count').textContent = `${keepers.length} kept`;
+  $('#skim-count').textContent = `${skimmers.length} skim`;
   $('#drop-count').textContent = `${tri.dropped.length} dropped`;
   $('#stats').innerHTML = statTiles(tri, null);
   if (animate && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('#keep-list .item, #drop-list .item').forEach((el, i) => {
+    document.querySelectorAll('#keep-list .item, #skim-list .item, #drop-list .item').forEach((el, i) => {
       el.classList.add('enter');
       el.style.animationDelay = (Math.min(i, 8) * 45) + 'ms';
     });
@@ -129,10 +134,10 @@ function escapeHtml(s) {
 
 function renderHonest(m) {
   const lift = (m.lift || 1.6);
-  const missed = Math.round((m.missed_pct || 0.39) * 100);
-  const silenced = Math.round((m.silenced_pct || 0.55) * 100);
-  const prec = Math.round((m.precision || 0.59) * 100);
-  const rec = Math.round((m.recall || 0.38) * 100);
+  const missed = Math.round((m.missed_pct || 0.437) * 100);
+  const silenced = Math.round((m.silenced_pct || 0.583) * 100);
+  const prec = Math.round((m.precision || 0.603) * 100);
+  const rec = Math.round((m.recall || 0.402) * 100);
   $('#honest-metrics').textContent =
     `held-out: precision ${prec}% · recall ${rec}% · silences ${silenced}% of the pile · lift ${lift}x vs a random item`;
   const hl = $('#h-lift'); if (hl) hl.textContent = lift + '×';

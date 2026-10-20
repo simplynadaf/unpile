@@ -28,6 +28,12 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Stage site (banner for OG image + optional custom domain)
+        run: |
+          cp docs/banner.png web/banner.png || true
+          # Drop a CNAME into the published site if a custom domain is set at repo root
+          # (e.g. echo unpile.tech > CNAME). No-op until you register one.
+          if [ -f CNAME ]; then cp CNAME web/CNAME; fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
