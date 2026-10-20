@@ -44,6 +44,8 @@
   /* ---- nav ---- */
   nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
     background:#020617cc;border-bottom:1px solid var(--border)}
+  /* keep anchored / scrolled-to content clear of the 60px sticky nav */
+  .col-head,.app,section[id]{scroll-margin-top:76px}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px}
   .brand .dot{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#16A34A,#0ea5e9);

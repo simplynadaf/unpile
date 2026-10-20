@@ -12,7 +12,7 @@ I am never going to read a thousand articles. I know this. You know this. "Read 
 
 So for the "Slow and Steady" challenge, the one that asks you to build something that rewards laziness, I built the laziest possible thing: an agent that goes through the whole pile for me, overnight, on my own laptop, and in the morning hands me the five or six things I will actually read. It silences the rest. No cloud. No account. No cost.
 
-It is called **Unpile**, and on my demo pile it kept 5 items out of 14, silenced 9, and gave me back 5.6 hours of reading time I was never going to spend.
+It is called **Unpile**, and on my demo pile it kept 5 items out of 14, set 1 aside as a maybe, silenced the other 8, and gave me back 5.5 hours of reading time I was never going to spend.
 
 ## What I Built
 
@@ -33,13 +33,13 @@ Who gets to be lazier? Anyone with a doom-pile. Which is all of us.
 
 Live, in your browser (no setup, real baked model output): **https://simplynadaf.github.io/unpile**
 
-Here is the demo pile getting triaged. On the left, the five items worth my morning, each with the reasons it survived and a one-line digest from Gemma. On the right, the nine that got silenced: the two-hour video essay I saved at 11pm, the "someday build a cabin" photo essay, the tabs-versus-spaces flamewar.
+Here is the demo pile getting triaged. On the left, the five items worth my morning, each with the reasons it survived and a one-line digest from Gemma. In the middle, the one borderline "maybe" it set aside for a quick skim. On the right, the eight it silenced: the two-hour video essay I saved at 11pm, the "someday build a cabin" photo essay, the tabs-versus-spaces flamewar.
 
-![Unpile triaging a read-later pile: 5 kept, 9 silenced, 5.6 hours reclaimed](docs/screenshots/hero.png)
+![Unpile triaging a read-later pile: 5 kept, 1 maybe, 8 silenced, 5.5 hours reclaimed](docs/screenshots/hero.png)
 
-The kept list and the silenced list, side by side:
+The keep, maybe, and silenced columns, side by side, each with probabilities and reasons:
 
-![The keep and drop columns with probabilities and reasons](docs/screenshots/result.png)
+![The keep, skim, and drop columns with probabilities and reasons](docs/screenshots/result.png)
 
 The whole thing runs on a plain CPU. The numbers on the page are the real TabPFN-v2 and Gemma output, frozen into the static site so the demo cannot break in front of you; toggle any item and an in-browser mirror of the model re-decides live.
 
