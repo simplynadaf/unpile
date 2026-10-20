@@ -69,6 +69,8 @@ for item, p in zip(items, probs):
 
 It predicts, decides an action, explains that action in plain language, and then reports honest held-out metrics on itself. That last part matters, and I will come back to it.
 
+I used TabPFN-v2 on purpose: it decides the whole pile in a single CPU forward pass, no GPU and no training run, which is exactly what lets Unpile run overnight on the laptop you already own.
+
 ### Gemma 3 is the writer
 
 [Gemma 3](https://ai.google.dev/gemma) runs locally through Ollama and writes the morning digest. It is given the keepers and their probabilities and told to never invent an item. If Ollama is busy or the machine is offline, a deterministic fallback writes a correct digest anyway, so the summary always arrives:
