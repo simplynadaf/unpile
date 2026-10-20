@@ -1,0 +1,395 @@
+{
+  "generated": "baked static snapshot (real TabPFN-v2 + Gemma output)",
+  "model": {
+    "decider": "TabPFN-v2 (CPU)",
+    "writer": "gemma3:1b"
+  },
+  "pile": [
+    {
+      "title": "The one Postgres index you forgot to add",
+      "source_id": 4,
+      "topic_id": 0,
+      "length_min": 8,
+      "age_days": 2,
+      "reopen_count": 3,
+      "topic_affinity": 0.92,
+      "is_howto": 1,
+      "has_video": 0,
+      "save_hour": 9,
+      "backlog_size": 180
+    },
+    {
+      "title": "A calmer git rebase workflow (that you'll actually keep)",
+      "source_id": 7,
+      "topic_id": 0,
+      "length_min": 11,
+      "age_days": 6,
+      "reopen_count": 1,
+      "topic_affinity": 0.85,
+      "is_howto": 1,
+      "has_video": 0,
+      "save_hour": 10,
+      "backlog_size": 180
+    },
+    {
+      "title": "DM from a friend: 'this one explains CRDTs properly'",
+      "source_id": 5,
+      "topic_id": 2,
+      "length_min": 18,
+      "age_days": 4,
+      "reopen_count": 2,
+      "topic_affinity": 0.74,
+      "is_howto": 0,
+      "has_video": 0,
+      "save_hour": 8,
+      "backlog_size": 180
+    },
+    {
+      "title": "A 2-hour video essay on medieval trade routes",
+      "source_id": 3,
+      "topic_id": 5,
+      "length_min": 120,
+      "age_days": 260,
+      "reopen_count": 0,
+      "topic_affinity": 0.18,
+      "is_howto": 0,
+      "has_video": 1,
+      "save_hour": 23,
+      "backlog_size": 620
+    },
+    {
+      "title": "Thread: 12 productivity hacks that changed my life",
+      "source_id": 2,
+      "topic_id": 1,
+      "length_min": 6,
+      "age_days": 95,
+      "reopen_count": 0,
+      "topic_affinity": 0.44,
+      "is_howto": 0,
+      "has_video": 0,
+      "save_hour": 15,
+      "backlog_size": 620
+    },
+    {
+      "title": "The complete history of the JavaScript framework wars",
+      "source_id": 1,
+      "topic_id": 4,
+      "length_min": 42,
+      "age_days": 180,
+      "reopen_count": 0,
+      "topic_affinity": 0.3,
+      "is_howto": 0,
+      "has_video": 0,
+      "save_hour": 1,
+      "backlog_size": 620
+    },
+    {
+      "title": "How to actually use your air fryer (saved during lunch)",
+      "source_id": 6,
+      "topic_id": 3,
+      "length_min": 7,
+      "age_days": 40,
+      "reopen_count": 0,
+      "topic_affinity": 0.6,
+      "is_howto": 1,
+      "has_video": 0,
+      "save_hour": 13,
+      "backlog_size": 400
+    },
+    {
+      "title": "Someday: build a cabin in the woods, a photo essay",
+      "source_id": 0,
+      "topic_id": 5,
+      "length_min": 15,
+      "age_days": 320,
+      "reopen_count": 0,
+      "topic_affinity": 0.2,
+      "is_howto": 0,
+      "has_video": 0,
+      "save_hour": 22,
+      "backlog_size": 620
+    },
+    {
+      "title": "Reference: the full CSS grid spec, for 'later'",
+      "source_id": 4,
+      "topic_id": 0,
+      "length_min": 35,
+      "age_days": 150,
+      "reopen_count": 1,
+      "topic_affinity": 0.7,
+      "is_howto": 1,
+      "has_video": 0,
+      "save_hour": 11,
+      "backlog_size": 400
+    },
+    {
+      "title": "Watch later: 90-min conference keynote",
+      "source_id": 3,
+      "topic_id": 2,
+      "length_min": 90,
+      "age_days": 70,
+      "reopen_count": 0,
+      "topic_affinity": 0.4,
+      "is_howto": 0,
+      "has_video": 1,
+      "save_hour": 20,
+      "backlog_size": 620
+    },
+    {
+      "title": "Hacker News flamewar about tabs vs spaces (again)",
+      "source_id": 1,
+      "topic_id": 4,
+      "length_min": 25,
+      "age_days": 210,
+      "reopen_count": 0,
+      "topic_affinity": 0.25,
+      "is_howto": 0,
+      "has_video": 0,
+      "save_hour": 0,
+      "backlog_size": 620
+    },
+    {
+      "title": "Newsletter: this week in AI (issue #214)",
+      "source_id": 0,
+      "topic_id": 4,
+      "length_min": 12,
+      "age_days": 9,
+      "reopen_count": 0,
+      "topic_affinity": 0.55,
+      "is_howto": 0,
+      "has_video": 0,
+      "save_hour": 7,
+      "backlog_size": 180
+    },
+    {
+      "title": "DM: 'the on-call runbook you asked me for'",
+      "source_id": 5,
+      "topic_id": 0,
+      "length_min": 9,
+      "age_days": 1,
+      "reopen_count": 2,
+      "topic_affinity": 0.88,
+      "is_howto": 1,
+      "has_video": 0,
+      "save_hour": 9,
+      "backlog_size": 180
+    },
+    {
+      "title": "Aspirational: learn to play jazz piano in 2026",
+      "source_id": 2,
+      "topic_id": 5,
+      "length_min": 20,
+      "age_days": 300,
+      "reopen_count": 0,
+      "topic_affinity": 0.15,
+      "is_howto": 0,
+      "has_video": 1,
+      "save_hour": 23,
+      "backlog_size": 620
+    }
+  ],
+  "triage": {
+    "kept": [
+      {
+        "action": "keep",
+        "prob": 0.7695,
+        "reasons": [
+          "you reopened it 2x (real intent)",
+          "squarely in your usual lane",
+          "actionable how-to"
+        ],
+        "title": "DM: 'the on-call runbook you asked me for'",
+        "source": "friend / dm recommend",
+        "topic": "work / current project",
+        "length_min": 9.0
+      },
+      {
+        "action": "keep",
+        "prob": 0.7655,
+        "reasons": [
+          "you reopened it 3x (real intent)",
+          "squarely in your usual lane",
+          "actionable how-to"
+        ],
+        "title": "The one Postgres index you forgot to add",
+        "source": "docs / reference",
+        "topic": "work / current project",
+        "length_min": 8.0
+      },
+      {
+        "action": "keep",
+        "prob": 0.7369,
+        "reasons": [
+          "squarely in your usual lane",
+          "actionable how-to"
+        ],
+        "title": "A calmer git rebase workflow (that you'll actually keep)",
+        "source": "blog / rss",
+        "topic": "work / current project",
+        "length_min": 11.0
+      },
+      {
+        "action": "keep",
+        "prob": 0.7032,
+        "reasons": [
+          "you reopened it 2x (real intent)",
+          "squarely in your usual lane"
+        ],
+        "title": "DM from a friend: 'this one explains CRDTs properly'",
+        "source": "friend / dm recommend",
+        "topic": "deep tech / research",
+        "length_min": 18.0
+      },
+      {
+        "action": "keep",
+        "prob": 0.6373,
+        "reasons": [
+          "squarely in your usual lane",
+          "actionable how-to",
+          "35-min longread (likely tl;dr)"
+        ],
+        "title": "Reference: the full CSS grid spec, for 'later'",
+        "source": "docs / reference",
+        "topic": "work / current project",
+        "length_min": 35.0
+      }
+    ],
+    "skim": [],
+    "dropped": [
+      {
+        "action": "drop",
+        "prob": 0.117,
+        "reasons": [
+          "far from what you usually read",
+          "300 days stale",
+          "'watch later' video"
+        ],
+        "title": "Aspirational: learn to play jazz piano in 2026",
+        "source": "twitter / x thread",
+        "topic": "aspirational / someday",
+        "length_min": 20.0
+      },
+      {
+        "action": "drop",
+        "prob": 0.1247,
+        "reasons": [
+          "far from what you usually read",
+          "320 days stale",
+          "buried deep in the pile"
+        ],
+        "title": "Someday: build a cabin in the woods, a photo essay",
+        "source": "newsletter",
+        "topic": "aspirational / someday",
+        "length_min": 15.0
+      },
+      {
+        "action": "drop",
+        "prob": 0.143,
+        "reasons": [
+          "far from what you usually read",
+          "210 days stale",
+          "buried deep in the pile"
+        ],
+        "title": "Hacker News flamewar about tabs vs spaces (again)",
+        "source": "hacker news / reddit",
+        "topic": "news / current events",
+        "length_min": 25.0
+      },
+      {
+        "action": "drop",
+        "prob": 0.1585,
+        "reasons": [
+          "far from what you usually read",
+          "120-min longread (likely tl;dr)",
+          "260 days stale"
+        ],
+        "title": "A 2-hour video essay on medieval trade routes",
+        "source": "youtube (watch later)",
+        "topic": "aspirational / someday",
+        "length_min": 120.0
+      },
+      {
+        "action": "drop",
+        "prob": 0.1655,
+        "reasons": [
+          "far from what you usually read",
+          "42-min longread (likely tl;dr)",
+          "180 days stale"
+        ],
+        "title": "The complete history of the JavaScript framework wars",
+        "source": "hacker news / reddit",
+        "topic": "news / current events",
+        "length_min": 42.0
+      },
+      {
+        "action": "drop",
+        "prob": 0.3243,
+        "reasons": [
+          "buried deep in the pile"
+        ],
+        "title": "Thread: 12 productivity hacks that changed my life",
+        "source": "twitter / x thread",
+        "topic": "career & productivity",
+        "length_min": 6.0
+      },
+      {
+        "action": "drop",
+        "prob": 0.3401,
+        "reasons": [
+          "90-min longread (likely tl;dr)",
+          "'watch later' video",
+          "buried deep in the pile"
+        ],
+        "title": "Watch later: 90-min conference keynote",
+        "source": "youtube (watch later)",
+        "topic": "deep tech / research",
+        "length_min": 90.0
+      },
+      {
+        "action": "drop",
+        "prob": 0.3428,
+        "reasons": [
+          "actionable how-to"
+        ],
+        "title": "How to actually use your air fryer (saved during lunch)",
+        "source": "google search result",
+        "topic": "hobby",
+        "length_min": 7.0
+      },
+      {
+        "action": "drop",
+        "prob": 0.3671,
+        "reasons": [
+          "a borderline call either way"
+        ],
+        "title": "Newsletter: this week in AI (issue #214)",
+        "source": "newsletter",
+        "topic": "news / current events",
+        "length_min": 12.0
+      }
+    ],
+    "total": 14,
+    "minutes_saved": 337.0
+  },
+  "digest": {
+    "greeting": "Good morning, it's a lovely start to the day, let's get you some focused content.",
+    "blurbs": [
+      "Quick Postgres index refresh \u2013 ensure your data is always up-to-date.",
+      "A smoother git rebase \u2013 streamline your development process today.",
+      "A calming workflow \u2013 focus on tasks with a gentle pace.",
+      "Understanding CRDTs \u2013 delve into a key data synchronization technique.",
+      "The CSS grid spec \u2013 a valuable resource for web design progress."
+    ],
+    "source": "gemma",
+    "model": "gemma3:1b"
+  },
+  "metrics": {
+    "precision": 0.589,
+    "recall": 0.379,
+    "silenced_pct": 0.554,
+    "missed_pct": 0.391,
+    "read_rate": 0.362,
+    "lift": 1.63,
+    "n_test": 240
+  }
+}
