@@ -1,5 +1,5 @@
 ---
-title: I saved 1,247 articles for later. An open model on my laptop kept 5.
+title: I let an open model delete 1,242 of my saved articles. On purpose. I feel lighter.
 published: false
 description: Unpile is a 100% local read-later triage agent. TabPFN decides which saved articles you will actually read, Gemma writes the digest, offline and free.
 tags: devchallenge, hf26challenge, ai, opensource
@@ -7,13 +7,15 @@ tags: devchallenge, hf26challenge, ai, opensource
 
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19)*
 
-I have a folder called "Read Later." You have one too. Mine had 1,247 things in it.
+I had 1,247 articles saved "for later." This week I let a model on my laptop throw almost all of them away, and I have never felt lighter.
 
-I am never going to read 1,247 articles. I know this. You know this. "Read later" is the most optimistic lie in software: every tab I save is a tiny promise to a future version of me who does not exist. The pile does not inform me. It sits there and taxes me a little guilt every time I open a new tab.
+Let me tell you why that was so hard, and why I would do it again.
 
-The challenge this week, "Slow and Steady," asks for something that rewards laziness: channel your inner sloth, build the thing that does the work so you do not have to. So I built the laziest thing I could imagine. An agent that chews through the entire pile overnight, on my own laptop, with the Wi-Fi off, and in the morning hands me the five or six things I will actually read. It silences the rest. No cloud. No account. No cost.
+"Read later" is the most optimistic lie in software. Every tab I save is a tiny promise to a future version of me who does not exist, the one with a free Sunday and a cup of tea and nothing better to do. That version is never coming. So the pile just sits there, 1,247 promises deep, and taxes me a little guilt every single time I open a new tab. I was not keeping those articles. They were keeping me.
 
-It is called **Unpile**. On the demo pile below it reads 14 saved items, keeps **5**, flags **1** maybe, silences **8**, and hands back **5.5 hours** of reading time I was never going to spend. Point it at a real 1,200-item backlog and it does the same thing while you sleep.
+The challenge this week, "Slow and Steady," asks for something that rewards laziness: channel your inner sloth, build the thing that does the work so you do not have to. So I built the one thing I was too afraid to do by hand. An agent that reads the whole pile overnight, on my own laptop, with the Wi-Fi off, learns which handful I will genuinely read, and then does the scary part for me: it deletes the rest. No cloud. No account. No cost. No more guilt.
+
+It is called **Unpile**. On the demo pile it reads 14 saved items, keeps the **5** worth my morning, flags **1** maybe, and silences **8**, handing back **5.5 hours** of reading time I was lying to myself about. Point it at a real 1,200-item backlog and it quietly clears years of guilt while you sleep.
 
 ## What I Built
 
@@ -102,11 +104,13 @@ A closed API could summarize an article. It could not become a private, offline,
 
 ## The Lazy Payoff
 
-Here is what this actually bought me, in the only currency the challenge cares about: effort I no longer spend.
+Here is what this actually bought me, and it was not time. It was permission to let go.
 
-I used to be the triage system. Every few days I would open that folder, feel the weight of 1,247 unread promises, scroll a bit, close it, and feel slightly worse. That recurring chore is gone. Now the pile resolves itself overnight and I wake up to five things and a two-line note. I did not read 1,242 items this week. I did not even look at them. That is the point.
+I used to be the triage system. Every few days I would open that folder, feel the weight of 1,247 unread promises, scroll a bit, close it, and feel slightly worse than before. The backlog was not a to-do list. It was a slow-drip guilt machine I had built for myself, one hopeful tab at a time. What I could never do was the obvious thing: just delete them. Deleting felt like admitting I would never become the person who reads 1,247 articles. So I never did. The pile only grew.
 
-Quantified on the demo pile alone: **8 of 14 items silenced with zero input from me**, and **5.5 hours** of reading time handed back, time I was never going to spend but used to feel guilty about anyway. Point it at a real 1,200-item backlog and it is doing days of judgment calls while I sleep. The sloth philosophy, literally: move slow, conserve energy, let the boring part happen without you.
+The model does not have that hang-up. It looked at my own history, decided which five were real, and threw the rest away without a flicker of guilt, because it does not have any. I did not read 1,242 items this week. I did not even look at them. And the folder that used to make me wince now makes me feel nothing at all, which, after years of that quiet tax, feels like a lot.
+
+Quantified in the only currency the challenge cares about: **8 of 14 items silenced with zero input from me**, and **5.5 hours** of reading time handed back, time I was lying to myself about anyway. Point it at a real 1,200-item backlog and it is clearing years of that guilt while I sleep. The sloth philosophy, literally: move slow, conserve energy, let the boring, frightening part happen without you.
 
 ## The Honest Take
 
