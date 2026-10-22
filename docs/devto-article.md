@@ -35,11 +35,11 @@ Live, in your browser (no setup, real baked model output): **https://simplynadaf
 
 Here is the demo pile getting triaged. On the left, the five items worth my morning, each with the reasons it survived and a one-line digest from Gemma. In the middle, the one borderline "maybe" it set aside for a quick skim. On the right, the eight it silenced: the two-hour video essay I saved at 11pm, the "someday build a cabin" photo essay, the tabs-versus-spaces flamewar.
 
-![Unpile triaging a read-later pile: 5 kept, 1 maybe, 8 silenced, 5.5 hours reclaimed](docs/screenshots/hero.png)
+![Unpile triaging a read-later pile: 5 kept, 1 maybe, 8 silenced, 5.5 hours reclaimed](https://raw.githubusercontent.com/simplynadaf/unpile-read-later-triage/main/docs/screenshots/hero.png)
 
 The keep, maybe, and silenced columns, side by side, each with probabilities and reasons:
 
-![The keep, skim, and drop columns with probabilities and reasons](docs/screenshots/result.png)
+![The keep, skim, and drop columns with probabilities and reasons](https://raw.githubusercontent.com/simplynadaf/unpile-read-later-triage/main/docs/screenshots/result.png)
 
 The whole thing runs on a plain CPU. The numbers on the page are the real TabPFN-v2 and Gemma output, frozen into the static site so the demo cannot break in front of you; toggle any item and an in-browser mirror of the model re-decides live.
 

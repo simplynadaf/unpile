@@ -19,6 +19,10 @@ Unpile is a 100% local agent that learns which is which, and clears the pile for
 
 [Live Preview](https://simplynadaf.github.io/unpile-read-later-triage) &nbsp;|&nbsp; [How It Works](#how-it-works-two-open-models-one-job-each) &nbsp;|&nbsp; [Why Open](#why-open-innovation-matters) &nbsp;|&nbsp; [The Honest Take](#the-honest-take)
 
+<br/>
+
+<img src="https://raw.githubusercontent.com/simplynadaf/unpile-read-later-triage/main/docs/screenshots/hero.png" alt="Unpile: a 100% local read-later triage agent powered by TabPFN-v2 and Gemma 3" width="100%"/>
+
 </div>
 
 ---
@@ -47,6 +51,11 @@ reading time you were never going to spend anyway.
 | **A short "keep" list** | Only the items you are actually likely to read, ranked by probability, each with the plain-language reasons it survived (reopened 3x, in your lane, actionable how-to). |
 | **A calm morning digest** | A local Gemma model turns the keepers into a warm, low-pressure two-line note, so your morning starts with a nudge, not a backlog. |
 | **A measured, honest scorecard** | Held-out precision and recall, the share of the pile it safely silences, a **lift** number (how much better the kept pile reads than a random item), and the good items it wrongly drops. No hiding the cost. |
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/simplynadaf/unpile-read-later-triage/main/docs/screenshots/result.png" alt="Unpile triaging a real read-later pile: 5 kept with reasons, 1 maybe, 8 silenced, 5.5 hours reclaimed, with a Gemma morning digest" width="100%"/>
+<br/><em>A real backlog triaged on-device: 5 kept (with reasons), 1 maybe, 8 silenced, 5.5 hours reclaimed.</em>
+</div>
 
 ---
 
