@@ -4,7 +4,7 @@
 
 ### Your read-later pile, triaged by an open model on your own machine
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-16A34A?style=for-the-badge&logo=github)](https://simplynadaf.github.io/unpile)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-16A34A?style=for-the-badge&logo=github)](https://simplynadaf.github.io/unpile-read-later-triage)
 [![TabPFN](https://img.shields.io/badge/Decides%20with-TabPFN--v2-16A34A?style=for-the-badge)](https://github.com/PriorLabs/TabPFN)
 [![Gemma](https://img.shields.io/badge/Writes%20with-Gemma%203-0ea5e9?style=for-the-badge)](https://ai.google.dev/gemma)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
@@ -17,7 +17,7 @@ Unpile is a 100% local agent that learns which is which, and clears the pile for
 
 <br/>
 
-[Live Preview](https://simplynadaf.github.io/unpile) &nbsp;|&nbsp; [How It Works](#how-it-works-two-open-models-one-job-each) &nbsp;|&nbsp; [Why Open](#why-open-innovation-matters) &nbsp;|&nbsp; [The Honest Take](#the-honest-take)
+[Live Preview](https://simplynadaf.github.io/unpile-read-later-triage) &nbsp;|&nbsp; [How It Works](#how-it-works-two-open-models-one-job-each) &nbsp;|&nbsp; [Why Open](#why-open-innovation-matters) &nbsp;|&nbsp; [The Honest Take](#the-honest-take)
 
 </div>
 
