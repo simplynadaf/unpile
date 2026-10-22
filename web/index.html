@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Unpile - your read-later pile, triaged by an open model on your own machine</title>
 <meta name="description" content="A 100% local agent that reads your 'save for later' habits with TabPFN-v2 and hands you only the few articles worth your morning. Open-weight, offline, $0." />
+<!-- Favicon: inline SVG of the Unpile mark (green→blue gradient tile with stacked lines),
+     so the logo shows in the browser tab with no external file. PNG/ICO fallbacks optional. -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2316A34A'/%3E%3Cstop offset='1' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cg stroke='%23021007' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M8 11h16'/%3E%3Cpath d='M8 16h16'/%3E%3Cpath d='M8 21h10'/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2316A34A'/%3E%3Cstop offset='1' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cg stroke='%23021007' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M8 11h16'/%3E%3Cpath d='M8 16h16'/%3E%3Cpath d='M8 21h10'/%3E%3C/g%3E%3C/svg%3E" />
 <!-- Open Graph / Twitter: rich link previews when shared on DEV, X, LinkedIn. -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Unpile - your read-later pile, triaged by an open model on your own machine" />
@@ -64,18 +68,30 @@
   .nav-links a{color:var(--muted)}.nav-links a:hover{color:var(--fg);text-decoration:none}
   @media(max-width:720px){.nav-links{display:none}}
 
-  /* ---- hero ---- */
-  header{padding:calc(var(--space-5) + 40px) 0 var(--space-5);text-align:center;position:relative}
+  /* ---- hero (full first screen: everything essential fits in one viewport) ---- */
+  header{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;text-align:center;position:relative;
+    padding:calc(60px + var(--space-4)) 0 var(--space-4)}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;
     letter-spacing:0;color:var(--accent);border:1px solid #16a34a3d;padding:7px 16px;border-radius:999px;
     background:linear-gradient(180deg,#16a34a1f,#16a34a0d);margin-bottom:var(--space-3);
     box-shadow:0 0 0 1px #0b1020 inset,0 6px 22px #16a34a1f}
-  header h1{font-size:clamp(40px,7vw,76px);max-width:960px;margin:0 auto var(--space-3);font-weight:800;line-height:1.04}
+  header h1{font-size:clamp(34px,6vw,68px);max-width:960px;margin:0 auto var(--space-2);font-weight:800;line-height:1.04}
   header h1 .num{background:linear-gradient(135deg,#22C55E,#0ea5e9);-webkit-background-clip:text;
     background-clip:text;-webkit-text-fill-color:transparent;
     filter:drop-shadow(0 0 26px #16a34a66)}
-  header .sub{font-size:clamp(17px,2.4vw,22px);color:#aeb9cc;max-width:680px;margin:0 auto var(--space-4);
+  header .sub{font-size:clamp(16px,2.2vw,21px);color:#aeb9cc;max-width:660px;margin:0 auto var(--space-3);
     line-height:1.5;letter-spacing:-0.01em}
+  /* compact proof strip: the key result, right on the first screen */
+  .hero-proof{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin:0 auto var(--space-3);
+    border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#0b102088;
+    backdrop-filter:blur(6px);box-shadow:0 18px 50px #00000066,0 0 0 1px #16a34a14}
+  .hero-proof .hp{padding:14px 26px;min-width:120px}
+  .hero-proof .hp + .hp{border-left:1px solid var(--border)}
+  .hero-proof .v{font-family:var(--mono);font-size:clamp(22px,3vw,30px);font-weight:600;line-height:1}
+  .hero-proof .v.good{color:var(--keep)}
+  .hero-proof .k{font-size:11.5px;color:var(--muted);margin-top:6px;letter-spacing:.01em}
+  @media(max-width:520px){.hero-proof .hp{padding:12px 16px;min-width:96px}}
   .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .btn{padding:13px 24px;border-radius:12px;font-weight:600;font-size:15px;cursor:pointer;
     transition:transform .15s,box-shadow .15s,background .15s;border:1px solid transparent;display:inline-flex;align-items:center;gap:9px}
@@ -87,6 +103,16 @@
   .trust{margin-top:var(--space-3);display:flex;gap:18px;justify-content:center;flex-wrap:wrap;
     font-size:13px;color:var(--muted)}
   .trust span{display:inline-flex;align-items:center;gap:7px}
+  /* scroll hint anchored to the bottom of the first screen */
+  .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+    display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--muted);
+    font-size:11.5px;font-family:var(--mono);letter-spacing:.04em;text-decoration:none}
+  .scroll-hint:hover{color:var(--fg);text-decoration:none}
+  .scroll-hint svg{width:18px;height:18px;animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+  @media(max-height:720px){header{min-height:0;padding:calc(60px + var(--space-4)) 0 var(--space-5)}
+    .scroll-hint{display:none}}
+  @media(prefers-reduced-motion:reduce){.scroll-hint svg{animation:none}}
 
   /* ---- app / demo ---- */
   section{padding:var(--space-5) 0}
@@ -221,6 +247,11 @@
       </span>
     <h1>I had <span class="num" id="hero-total">1,247</span> articles saved “for later.”<br/>An open model learned my habits and kept <span class="num" id="hero-kept">5</span>.</h1>
     <p class="sub">Unpile is a 100% local agent that reads your “save it, never open it” habits, silences the <span id="hero-silenced">58%</span> of your backlog that will only ever rot, and hands you a calm two-line morning digest of the few things actually worth your coffee. No cloud. No account. $0.</p>
+    <div class="hero-proof" id="hero-proof" aria-label="headline results on the demo pile">
+      <div class="hp"><div class="v good" id="hp-kept">5</div><div class="k">kept for your morning</div></div>
+      <div class="hp"><div class="v" id="hp-silenced">8</div><div class="k">silenced automatically</div></div>
+      <div class="hp"><div class="v good" id="hp-hours">5.5 h</div><div class="k">reading time reclaimed</div></div>
+    </div>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="#demo">
         <svg class="ic" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
@@ -238,6 +269,10 @@
       <span><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg> MIT · $0 / item</span>
     </div>
   </div>
+  <a class="scroll-hint" href="#demo" aria-label="Scroll to the live demo">
+    <span>SEE IT WORK</span>
+    <svg class="ic" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
 </header>
 
 <section id="demo">

@@ -43,6 +43,13 @@ function renderHeroFromBaked(d) {
   // It is intentionally NOT the demo pile size, so we leave #hero-total / #hero-kept
   // as authored and only sync the one real metric we quote in the subhead.
   $('#hero-silenced').textContent = Math.round(d.metrics.silenced_pct * 100) + '%';
+  // Proof strip on the first screen: pull the real kept/silenced/hours from the baked run.
+  const tri = d.triage || {};
+  const hrs = (tri.minutes_saved || 0) / 60;
+  const set = (id, val) => { const el = $(id); if (el) el.textContent = val; };
+  set('#hp-kept', (tri.kept || []).length);
+  set('#hp-silenced', (tri.dropped || []).length);
+  set('#hp-hours', hrs >= 1 ? hrs.toFixed(1) + ' h' : Math.round(tri.minutes_saved || 0) + ' m');
 }
 
 function statTiles(tri, metrics) {
