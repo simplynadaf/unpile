@@ -70,7 +70,7 @@ Open weights used:
 
 Built by Sarvar Nadaf: https://dev.to/sarvar_04
 
-Music: calm ambient instrumental, royalty-free.
+Music: soft ambient instrumental pad, royalty-free (a calm background bed, kept low).
 
 #OpenSource #LocalAI #TabPFN #Gemma #Hacktoberfest #OfflineAI #Ollama #Privacy
 
@@ -78,19 +78,19 @@ Music: calm ambient instrumental, royalty-free.
 
 ## CHAPTERS (paste into the description; first one must be 0:00)
 
-0:00 The read-later pile problem
-0:07 You saved 1,247 things for later
-0:13 A real backlog, 14 saved items
-0:22 The agent triages it in one CPU pass
-0:30 Use case 1: the few worth your morning
-0:38 Use case 2: the borderline maybe
-0:45 Use case 3: the doom-pile it silences
-0:54 Your morning digest, written by Gemma 3
-1:03 How it works: two open models
-1:10 Why open and local matters
-1:18 The honest take
+0:00 What Unpile is
+0:07 The problem: a 1,200-tab pile
+0:14 Step 1: point it at your backlog
+0:19 Step 2: one click to triage
+0:29 The result: 5 kept, 8 silenced
+0:35 Step 3: your keep list, with reasons
+0:45 What gets silenced
+0:52 Step 4: the Gemma morning digest
+1:02 How it works: two open models
+1:09 Why open and local matters
+1:17 The honest take
 
-(Timestamps are aligned to the final 90s cut. If you trim or re-record, re-check them against
+(Timestamps match the final 90s how-to cut. If you trim or re-record, re-check them against
 the upload; YouTube reads the first column literally, and the first chapter must be 0:00.)
 
 ---
