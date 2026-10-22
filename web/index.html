@@ -76,7 +76,10 @@
     letter-spacing:0;color:var(--accent);border:1px solid #16a34a3d;padding:6px 15px;border-radius:999px;
     background:linear-gradient(180deg,#16a34a1f,#16a34a0d);margin-bottom:var(--space-2);
     box-shadow:0 0 0 1px #0b1020 inset,0 6px 22px #16a34a1f}
-  header h1{font-size:clamp(30px,4.6vw,56px);max-width:900px;margin:0 auto var(--space-2);font-weight:800;line-height:1.06}
+  header h1{font-size:clamp(26px,3.6vw,48px);max-width:none;margin:0 auto var(--space-2);font-weight:800;line-height:1.14}
+  header h1 .line{display:block}
+  /* on roomy screens each sentence stays on exactly one line -> clean 2-line headline */
+  @media(min-width:900px){header h1 .line{white-space:nowrap}}
   header h1 .num{background:linear-gradient(135deg,#22C55E,#0ea5e9);-webkit-background-clip:text;
     background-clip:text;-webkit-text-fill-color:transparent;
     filter:drop-shadow(0 0 26px #16a34a66)}
@@ -246,7 +249,7 @@
         <svg class="ic" viewBox="0 0 24 24" style="width:14px;height:14px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
         Hacktoberfest · Slow and Steady · runs on your laptop
       </span>
-    <h1>I had <span class="num" id="hero-total">1,247</span> articles saved “for later.”<br/>An open model learned my habits and kept <span class="num" id="hero-kept">5</span>.</h1>
+    <h1><span class="line">I had <span class="num" id="hero-total">1,247</span> articles saved “for later.”</span><span class="line">An open model learned my habits and kept <span class="num" id="hero-kept">5</span>.</span></h1>
     <p class="sub">Unpile is a 100% local agent that reads your “save it, never open it” habits, silences the <span id="hero-silenced">58%</span> of your backlog that will only ever rot, and hands you a calm two-line morning digest of the few things actually worth your coffee. No cloud. No account. $0.</p>
     <div class="hero-proof" id="hero-proof" aria-label="headline results on the demo pile">
       <div class="hp"><div class="v good" id="hp-kept">5</div><div class="k">kept for your morning</div></div>
