@@ -1,6 +1,7 @@
 ---
-title: I had 1,247 articles saved "for later." An open model on my own laptop learned my habits and handed me 5.
+title: I saved 1,247 articles for later. An open model on my laptop kept 5.
 published: false
+description: Unpile is a 100% local read-later triage agent. TabPFN decides which saved articles you will actually read, Gemma writes the digest, offline and free.
 tags: devchallenge, hf26challenge, ai, opensource
 ---
 
@@ -38,11 +39,9 @@ Who gets to be lazier? Anyone with a doom-pile of unread tabs. Which, let us be 
 
 The 60-second walkthrough goes end to end: the open-source repo, then the real pipeline running in a terminal (the reading history TabPFN learns from, the keep/skim/drop call with a reason for every item, the local Gemma digest, and the honest held-out scorecard), then the live site. Nothing is staged; the numbers on screen are the actual program output.
 
-Here is the demo pile getting triaged. On the left, the five items worth my morning, each with the reasons it survived and a one-line digest from Gemma. In the middle, the one borderline "maybe" it set aside for a quick skim. On the right, the eight it silenced: the two-hour video essay I saved at 11pm, the "someday build a cabin" photo essay, the tabs-versus-spaces flamewar.
-
 ![Unpile triaging a read-later pile: 5 kept, 1 maybe, 8 silenced, 5.5 hours reclaimed](https://raw.githubusercontent.com/simplynadaf/unpile-read-later-triage/main/docs/screenshots/hero.png)
 
-The keep, maybe, and silenced columns, side by side, each with probabilities and reasons:
+And here is the triaged pile itself: five keepers on the left (each with the reasons it survived and a one-line Gemma digest), one borderline maybe in the middle, and the eight it silenced on the right, the 11pm two-hour video essay, the "someday build a cabin" photo essay, the tabs-versus-spaces flamewar.
 
 ![The keep, skim, and drop columns with probabilities and reasons](https://raw.githubusercontent.com/simplynadaf/unpile-read-later-triage/main/docs/screenshots/result.png)
 
@@ -103,7 +102,15 @@ A closed API could summarize an article. It could not become a private, offline,
 
 ## The Lazy Payoff
 
-Here is the honest scorecard, measured on a held-out slice of 240 saved items the model never saw, because a number I cannot check is just a vibe.
+Here is what this actually bought me, in the only currency the challenge cares about: effort I no longer spend.
+
+I used to be the triage system. Every few days I would open that folder, feel the weight of 1,247 unread promises, scroll a bit, close it, and feel slightly worse. That recurring chore is gone. Now the pile resolves itself overnight and I wake up to five things and a two-line note. I did not read 1,242 items this week. I did not even look at them. That is the point.
+
+Quantified on the demo pile alone: **8 of 14 items silenced with zero input from me**, and **5.5 hours** of reading time handed back, time I was never going to spend but used to feel guilty about anyway. Point it at a real 1,200-item backlog and it is doing days of judgment calls while I sleep. The sloth philosophy, literally: move slow, conserve energy, let the boring part happen without you.
+
+## The Honest Take
+
+Here is the scorecard, measured on a held-out slice of 240 saved items the model never saw, because a number I cannot check is just a vibe.
 
 - **Precision 0.60**: when Unpile surfaces something, I actually read it about 60% of the time, against a **36% base rate** in the raw pile. It nearly doubles the odds that the thing in front of me is worth it.
 - **Lift 1.66x**: the kept pile reads 1.66 times better than a random grab from the backlog.
@@ -115,8 +122,6 @@ And now the number I am putting right next to the good ones, on purpose:
 - **Wrongly dropped 44%.** At this setting, of the items I genuinely would have read, it also silenced about 44% of them. The most painful miss on the demo pile is "this week in AI (issue #214)" at 37% confidence: a fresh newsletter in a topic I follow, and it landed just under the keep line. It got silenced. On another morning I would have wanted it.
 
 I am not hiding that. Unpile is not magic; it trades recall for a calm morning. But the fix is a dial, not a lie: loosen one threshold (`UNPILE_KEEP_T`) and you recover more of those near-misses at the price of a slightly noisier digest. I would rather ship the honest trade-off, with the failure case named out loud, than a demo that pretends false negatives do not exist.
-
-Did it save me effort this week? Completely, and in the most literal way: I stopped being the filter. The pile went from a thing I avoided to a thing that quietly resolves itself overnight. That is the whole promise of the sloth. Move slow, conserve energy, let the boring part happen without you.
 
 ## Prize Categories
 
