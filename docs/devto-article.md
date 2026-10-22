@@ -31,7 +31,10 @@ Who gets to be lazier? Anyone with a doom-pile of unread tabs. Which, let us be 
 
 ## Demo
 
-Live, in your browser (no setup, real baked model output): **https://simplynadaf.github.io/unpile-read-later-triage**
+**Live, in your browser (no setup, real baked model output):** https://simplynadaf.github.io/unpile-read-later-triage
+**Video walkthrough:** [watch on YouTube](https://youtu.be/VIDEO_ID)
+
+{% embed https://youtu.be/VIDEO_ID %}
 
 Here is the demo pile getting triaged. On the left, the five items worth my morning, each with the reasons it survived and a one-line digest from Gemma. In the middle, the one borderline "maybe" it set aside for a quick skim. On the right, the eight it silenced: the two-hour video essay I saved at 11pm, the "someday build a cabin" photo essay, the tabs-versus-spaces flamewar.
 

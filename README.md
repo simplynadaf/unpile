@@ -5,6 +5,7 @@
 ### Your read-later pile, triaged by an open model on your own machine
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-16A34A?style=for-the-badge&logo=github)](https://simplynadaf.github.io/unpile-read-later-triage)
+[![YouTube](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge&logo=youtube)](https://youtu.be/VIDEO_ID)
 [![TabPFN](https://img.shields.io/badge/Decides%20with-TabPFN--v2-16A34A?style=for-the-badge)](https://github.com/PriorLabs/TabPFN)
 [![Gemma](https://img.shields.io/badge/Writes%20with-Gemma%203-0ea5e9?style=for-the-badge)](https://ai.google.dev/gemma)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
