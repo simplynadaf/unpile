@@ -134,6 +134,16 @@ python scripts/build_dataset.py
 python run.py          # http://127.0.0.1:8099
 ```
 
+Prefer to watch the whole thing work in your terminal, with no browser? One command
+walks the full pipeline on real data: the history TabPFN learns from, the keep/skim/drop
+decision and the plain-language reason for each item, the local Gemma digest, and the
+honest held-out scorecard.
+
+```bash
+python scripts/demo_cli.py          # the full data -> decision -> digest -> proof walk
+python scripts/demo_cli.py --pause 0   # no pauses (fast run / CI)
+```
+
 Bring your own pile: export from Pocket/Instapaper/bookmarks to CSV and parse it with
 `unpile/pile.py` (`parse_export`). Nothing you upload leaves your machine.
 
@@ -153,6 +163,7 @@ unpile/
     index.html, assets/app.js, assets/model.js, static-data.json
   scripts/
     build_dataset.py   # generate the dataset
+    demo_cli.py        # end-to-end terminal demo: data -> decisions -> digest -> scorecard
     validate.py        # end-to-end checks against the real stack
     bake_static.py     # freeze real TabPFN + Gemma output for the static demo
   run.py, requirements.txt, LICENSE
