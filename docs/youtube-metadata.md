@@ -1,7 +1,8 @@
 # Unpile - YouTube Metadata (Week 3: Slow and Steady)
 
 Everything below is copy-paste ready for the YouTube upload. No em dashes anywhere.
-Video file: `docs/demo.mp4` (90s, 1440x810, H.264 + AAC, calm ambient bed at 12 percent).
+Video file: `docs/demo.mp4` (60s, 1920x1080 HD, H.264 + AAC, soft instrumental bed at 12 percent).
+Three parts: the GitHub repo, the real terminal pipeline run, and the live website.
 
 ---
 
@@ -70,7 +71,8 @@ Open weights used:
 
 Built by Sarvar Nadaf: https://dev.to/sarvar_04
 
-Music: soft ambient instrumental pad, royalty-free (a calm background bed, kept low).
+Music: Low Mileage - Hold You (Instrumental) [NCS Release], a soft royalty-free bed kept low.
+Free download/stream: http://ncs.io/HoldYou
 
 #OpenSource #LocalAI #TabPFN #Gemma #Hacktoberfest #OfflineAI #Ollama #Privacy
 
@@ -79,19 +81,20 @@ Music: soft ambient instrumental pad, royalty-free (a calm background bed, kept 
 ## CHAPTERS (paste into the description; first one must be 0:00)
 
 0:00 What Unpile is
-0:07 The problem: a 1,200-tab pile
-0:14 Step 1: point it at your backlog
-0:19 Step 2: one click to triage
-0:29 The result: 5 kept, 8 silenced
-0:35 Step 3: your keep list, with reasons
-0:45 What gets silenced
-0:52 Step 4: the Gemma morning digest
-1:02 How it works: two open models
-1:09 Why open and local matters
-1:17 The honest take
+0:03 The open-source repo on GitHub
+0:10 Inside the README
+0:17 The pipeline, in the terminal
+0:19 Act 1: your own reading history
+0:24 Act 2: TabPFN decides, and says why
+0:30 Act 3: Gemma writes the morning digest
+0:35 Act 4: the honest scorecard
+0:40 The live website
+0:44 Kept, with reasons
+0:52 Why open and local matters
 
-(Timestamps match the final 90s how-to cut. If you trim or re-record, re-check them against
-the upload; YouTube reads the first column literally, and the first chapter must be 0:00.)
+(Timestamps match the 60s three-part cut: GitHub, then the terminal pipeline, then the live
+site. If you trim or re-record, re-check them against the upload; YouTube reads the first
+column literally, and the first chapter must be 0:00.)
 
 ---
 
@@ -123,10 +126,11 @@ Pair with the green-to-cyan gradient from the site and the "5.5 h reclaimed" sta
 
 ## UPLOAD CHECKLIST
 
-- [ ] Upload docs/demo.mp4
+- [ ] Upload docs/demo.mp4 (60s HD, 3 parts, with the soft instrumental bed)
 - [ ] Title + description + chapters pasted (chapters verified against final cut)
+- [ ] NCS music credit kept in the description (required by NCS license)
 - [ ] Visibility: Public (or Unlisted while the article is in review)
 - [ ] After publishing, copy the VIDEO_ID and replace `VIDEO_ID` in:
       - docs/devto-article.md (the youtu.be link and the {% embed %} line)
-      - README.md (the Watch Demo badge)
+      - README.md (the Watch Demo badge, the Demo thumbnail, and the header link)
 - [ ] Add the live-demo + repo links in the description (already included above)

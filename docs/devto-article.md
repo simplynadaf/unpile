@@ -36,6 +36,8 @@ Who gets to be lazier? Anyone with a doom-pile of unread tabs. Which, let us be 
 
 {% embed https://youtu.be/VIDEO_ID %}
 
+The 60-second walkthrough goes end to end: the open-source repo, then the real pipeline running in a terminal (the reading history TabPFN learns from, the keep/skim/drop call with a reason for every item, the local Gemma digest, and the honest held-out scorecard), then the live site. Nothing is staged; the numbers on screen are the actual program output.
+
 Here is the demo pile getting triaged. On the left, the five items worth my morning, each with the reasons it survived and a one-line digest from Gemma. In the middle, the one borderline "maybe" it set aside for a quick skim. On the right, the eight it silenced: the two-hour video essay I saved at 11pm, the "someday build a cabin" photo essay, the tabs-versus-spaces flamewar.
 
 ![Unpile triaging a read-later pile: 5 kept, 1 maybe, 8 silenced, 5.5 hours reclaimed](https://raw.githubusercontent.com/simplynadaf/unpile-read-later-triage/main/docs/screenshots/hero.png)
@@ -124,3 +126,7 @@ Did it save me effort this week? Completely, and in the most literal way: I stop
 Built new for this challenge (Oct 19 to 25). It reuses my own local-AI patterns from earlier weeks, re-applied to a new problem, dataset, agent loop, and UI, disclosed in the README per the credit rule.
 
 Thanks for reading all the way down. You just did something your backlog never let you do: you finished. Now go let a model read the rest for you.
+
+---
+
+*Demo music: Low Mileage - Hold You (Instrumental) [NCS Release], free to stream and download at [ncs.io/HoldYou](http://ncs.io/HoldYou).*
