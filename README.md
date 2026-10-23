@@ -11,7 +11,7 @@
 <br/>
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Try_it_now-16A34A?style=for-the-badge)](https://simplynadaf.github.io/unpile-read-later-triage)
-[![Watch Demo](https://img.shields.io/badge/▶_Watch-60s_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/VIDEO_ID)
+[![Watch Demo](https://img.shields.io/badge/▶_Watch-60s_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/e4b7YdLK7iI)
 [![Read Article](https://img.shields.io/badge/✍_Read-The_Story-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/sarvar_04)
 
 <br/>
@@ -44,7 +44,7 @@
 
 <br/>
 
-[🚀 Live Preview](https://simplynadaf.github.io/unpile-read-later-triage) &nbsp;·&nbsp; [▶ Watch the Demo](https://youtu.be/VIDEO_ID) &nbsp;·&nbsp; [🧠 How It Works](#-how-it-works-two-open-models-one-job-each) &nbsp;·&nbsp; [⚖️ Why Open](#️-why-open-innovation-matters)
+[🚀 Live Preview](https://simplynadaf.github.io/unpile-read-later-triage) &nbsp;·&nbsp; [▶ Watch the Demo](https://youtu.be/e4b7YdLK7iI) &nbsp;·&nbsp; [🧠 How It Works](#-how-it-works-two-open-models-one-job-each) &nbsp;·&nbsp; [⚖️ Why Open](#️-why-open-innovation-matters)
 
 </div>
 
@@ -54,11 +54,11 @@
 
 <div align="center">
 
-[![Watch the Unpile demo on YouTube](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://youtu.be/VIDEO_ID)
+[![Watch the Unpile demo on YouTube](https://img.youtube.com/vi/e4b7YdLK7iI/maxresdefault.jpg)](https://youtu.be/e4b7YdLK7iI)
 
 *A 60-second walk, end to end: the open-source repo → the real pipeline running in a terminal (the history TabPFN learns from, the keep/skim/drop call with a reason for every item, the local Gemma digest, the honest scorecard) → the live site. Nothing staged; every number is real program output.*
 
-**[▶ Watch on YouTube](https://youtu.be/VIDEO_ID)** &nbsp;·&nbsp; **[🚀 Try the live demo](https://simplynadaf.github.io/unpile-read-later-triage/)**
+**[▶ Watch on YouTube](https://youtu.be/e4b7YdLK7iI)** &nbsp;·&nbsp; **[🚀 Try the live demo](https://simplynadaf.github.io/unpile-read-later-triage/)**
 
 </div>
 
